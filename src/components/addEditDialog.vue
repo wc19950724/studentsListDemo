@@ -4,16 +4,18 @@
     :visible.sync="dialogVisible"
     destroy-on-close
     width="400px"
+    :close-on-click-modal="false"
+    :close-on-press-escape="false"
   >
     <el-form ref="form" :model="form" :rules="rules" :inline="true" label-width="80px">
         <el-form-item prop="name" label="学生姓名">
-            <el-input v-model="form.name"></el-input>
+            <el-input v-model="form.name" maxlength="10"></el-input>
         </el-form-item>
         <el-form-item prop="parentName" label="家长姓名">
-            <el-input v-model="form.parentName"></el-input>
+            <el-input v-model="form.parentName" maxlength="10"></el-input>
         </el-form-item>
         <el-form-item prop="class" label="班级">
-            <el-input v-model="form.class"></el-input>
+            <el-input v-model="form.class" maxlength="5"></el-input>
         </el-form-item>
     </el-form>
 

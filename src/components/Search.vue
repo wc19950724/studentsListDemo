@@ -1,13 +1,13 @@
 <template>
     <el-form ref="form" :model="form" :inline="true" :rules="rules">
         <el-form-item label="学生姓名" prop="name">
-            <el-input v-model="form.name" :maxlength="10"></el-input>
+            <el-input v-model="form.name" :maxlength="10" @keyup.enter.native="seatchHandle"></el-input>
         </el-form-item>
         <el-form-item label="家长姓名" prop="parentName">
-            <el-input v-model="form.parentName" :maxlength="10"></el-input>
+            <el-input v-model="form.parentName" :maxlength="10" @keyup.enter.native="seatchHandle"></el-input>
         </el-form-item>
         <el-form-item label="班级" prop="class">
-            <el-input v-model="form.class" :maxlength="5"></el-input>
+            <el-input v-model="form.class" :maxlength="5" @keyup.enter.native="seatchHandle"></el-input>
         </el-form-item>
         <el-form-item>
             <el-button type="primary" @click="seatchHandle">搜索</el-button>
